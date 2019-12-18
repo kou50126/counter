@@ -65,13 +65,33 @@
     <h1>Counter</h1>
     <p>You have <strong>{{ count }}</strong> count!</p>
     <button @click="count++">Increment</button>
+    <button @click="save">Save</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
+    const localData = JSON.parse(localStorage.getItem('counter'))
+    const isLocalData = (localData !== null)
+
     const app = new Vue({
       data: {
-        count: 0
+        // Auto load
+        count: isLocalData ?
+          ((localData.count !== null) && localData.count) :
+          0
       },
+
+      methods: {
+        save() {
+          localStorage.setItem('counter', JSON.stringify({
+            count: this.count
+          }))
+        },
+
+        load() {
+          this.count = localData.count
+        }
+      },
+      
       el: '#app'
     })
   </script>
