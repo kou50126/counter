@@ -4,8 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#003366">
   <title>Counter</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      max-height: 100%;
+    }
+
+    body {
+      align-items: center;
+      /* Dark midnoght blue */
+      background-color: #003366;
+      color: #ffffff;
+      display: flex;
+      font-family: 'Solway', serif;
+      font-size: x-large;
+      justify-content: center;
+      margin: 0;
+      text-align: center;
+    }
+
+    #app {
+      flex-wrap: wrap;
+    }
+
+    #app h1 {
+      font-size: 3em;
+      margin-bottom: 25%;
+      margin-top: 25%;
+    }
+
+    #app button {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 50px;
+      color: #ffffff;
+      font-family: 'Solway', serif;
+      font-size: large;
+      margin: .5em;
+      outline: none;
+      padding: .5em;
+    }
+
+    #app button:hover {
+      background-color: #ffffff;
+      color: #003366;
+      transition-duration: .5s;
+    }
+
+    #app button:active {
+      background-color: transparent;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
