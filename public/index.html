@@ -32,8 +32,6 @@
 
     #app h1 {
       font-size: 3em;
-      margin-bottom: 25%;
-      margin-top: 25%;
     }
 
     #app button {
@@ -64,7 +62,7 @@
   <div id="app">
     <h1>Counter</h1>
     <p>You have <strong>{{ count }}</strong> count!</p>
-    <button @click="count++">Increment</button>
+    <button @click="increment">Increment</button>
     <button @click="save">Save</button>
     <button @click="clear">Clear</button>
   </div>
@@ -82,6 +80,10 @@
       },
 
       methods: {
+        increment() {
+          this.count++
+        },
+
         save() {
           localStorage.setItem('counter', JSON.stringify({
             count: this.count
