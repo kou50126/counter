@@ -66,6 +66,7 @@
     <p>You have <strong>{{ count }}</strong> count!</p>
     <button @click="count++">Increment</button>
     <button @click="save">Save</button>
+    <button @click="clear">Clear</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
@@ -89,6 +90,10 @@
 
         load() {
           this.count = localData.count
+        },
+
+        clear() {
+          this.count = 0
         }
       },
       
